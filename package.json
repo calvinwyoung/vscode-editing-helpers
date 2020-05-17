@@ -12,17 +12,12 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vscode-collapse-whitespaces.helloWorld",
     "onCommand:vscode-collapse-whitespaces.justOneSpace",
     "onCommand:vscode-collapse-whitespaces.collapseWhitespaces"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
-      {
-        "command": "vscode-collapse-whitespaces.helloWorld",
-        "title": "Hello World"
-      },
       {
         "command": "vscode-collapse-whitespaces.justOneSpace",
         "title": "Just One Space"
