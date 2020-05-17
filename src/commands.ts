@@ -1,4 +1,4 @@
-import { window } from 'vscode';
+import { commands, window } from 'vscode';
 import { findHorizontalWhitespaceRange } from './helpers';
 
 /**
@@ -44,15 +44,10 @@ export const collapseWhitespaces = () => {
 };
 
 /**
- * Makes a copy of the current line and inserts it below the current line.
- */
-export const duplicateLine = () => {
-  window.showInformationMessage('Executing duplicateLine');
-};
-
-/**
  * Duplicates the current line, and comments the original.
  */
 export const duplicateLineAndComment = () => {
-  window.showInformationMessage('Executing duplicateLineAndComment');
+  commands.executeCommand('editor.action.addCommentLine');
+  commands.executeCommand('editor.action.copyLinesDownAction');
+  commands.executeCommand('editor.action.removeCommentLine');
 };

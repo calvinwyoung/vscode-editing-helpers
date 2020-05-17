@@ -1,10 +1,10 @@
 {
-  "name": "vscode-collapse-whitespaces",
+  "name": "vscode-editing-helpers",
   "displayName": "Collapse Whitespaces",
-  "description": "Helpers for collapsing whitespaces around the cursor in VSCode",
+  "description": "A collection helper functions to improve editing with VSCode",
   "version": "0.0.1",
   "publisner": "calvinwyoung",
-  "repository": "https://github.com/calvinwyoung/vscode-collapse-whitespaces",
+  "repository": "https://github.com/calvinwyoung/vscode-editing-helpers",
   "engines": {
     "vscode": "^1.45.0"
   },
@@ -12,19 +12,24 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vscode-collapse-whitespaces.justOneSpace",
-    "onCommand:vscode-collapse-whitespaces.collapseWhitespaces"
+    "onCommand:vscode-editing-helpers.justOneSpace",
+    "onCommand:vscode-editing-helpers.collapseWhitespaces",
+    "onCommand:vscode-editing-helpers.duplicateLineAndComment"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "vscode-collapse-whitespaces.justOneSpace",
+        "command": "vscode-editing-helpers.justOneSpace",
         "title": "Just One Space"
       },
       {
-        "command": "vscode-collapse-whitespaces.collapseWhitespaces",
+        "command": "vscode-editing-helpers.collapseWhitespaces",
         "title": "Collapse Whitespaces"
+      },
+      {
+        "command": "vscode-editing-helpers.duplicateLineAndComment",
+        "title": "Duplicate Line and Comment"
       }
     ]
   },

@@ -1,18 +1,22 @@
-import * as vscode from 'vscode';
-import { collapseWhitespaces, justOneSpace } from './commands';
+import { commands, ExtensionContext } from 'vscode';
+import { collapseWhitespaces, duplicateLineAndComment, justOneSpace } from './commands';
 
-export function activate(context: vscode.ExtensionContext) {
+export function activate(context: ExtensionContext) {
   context.subscriptions.push(
-    vscode.commands.registerCommand(
-      'vscode-collapse-whitespaces.justOneSpace',
-      justOneSpace
+    commands.registerCommand('vscode-editing-helpers.justOneSpace', justOneSpace)
+  );
+
+  context.subscriptions.push(
+    commands.registerCommand(
+      'vscode-editing-helpers.collapseWhitespaces',
+      collapseWhitespaces
     )
   );
 
   context.subscriptions.push(
-    vscode.commands.registerCommand(
-      'vscode-collapse-whitespaces.collapseWhitespaces',
-      collapseWhitespaces
+    commands.registerCommand(
+      'vscode-editing-helpers.duplicateLineAndComment',
+      duplicateLineAndComment
     )
   );
 }
