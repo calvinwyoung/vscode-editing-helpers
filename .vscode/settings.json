@@ -1,0 +1,29 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "editor.rulers": [90],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll.eslint": true
+  },
+
+  // ESLint configs.
+  "eslint.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": ["javascript", "typescript"],
+  "eslint.workingDirectories": ["./src"],
+  "eslint.format.enable": true,
+
+  "files.exclude": {
+    "out": false // set this to true to hide the "out" folder with the compiled JS files
+  },
+  "search.exclude": {
+    "out": true // set this to false to include "out" folder in search results
+  },
+  // Turn off tsc task auto detection since we have the necessary tasks as npm scripts
+  "typescript.tsc.autoDetect": "off"
+}
