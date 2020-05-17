@@ -1,65 +1,63 @@
-# vscode-editing-helpers README
+# VSCode Editing Helpers
 
-This is the README for your extension "vscode-editing-helpers". After writing up a brief description, we recommend including the following sections.
+This VS code extension provides some helper commands for editing text with VSCode. Many of
+these commands are inspired by Emacs.
 
-## Features
+These commands can either be executed via the command pallete or assigned to custom
+keyboard shortcuts. This extension doesn't provide any default keybindings of its own, and
+prefers to stay agnostic in terms of how it's used.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Commands
 
-For example if there is an image subfolder under your extension project workspace:
+The following commands are provided. In all of the examples, we use the `|` character to
+indicate the cursor position when the command is executed.
 
-\!\[feature X\]\(images/feature-x.png\)
+### Just One Space
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Collapses contiguous whitespace characters around the cursor such that only one whitespace character remains.
 
-## Requirements
+Example input:
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+```
+foo    |      bar
+```
 
-## Extension Settings
+Example output:
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+```
+foo |bar
+```
 
-For example:
+### Collapse Whitespaces
 
-This extension contributes the following settings:
+Collapses all contiguous whitespace characters around the cursor such that no whitespace
+characters remain.
 
-- `myExtension.enable`: enable/disable this extension
-- `myExtension.thing`: set to `blah` to do something
+Example input:
 
-## Known Issues
+```
+foo    |      bar
+```
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Example output:
 
-## Release Notes
+```
+foo|bar
+```
 
-Users appreciate release notes as you update your extension.
+### Duplicate Line and Comment
 
-### 1.0.0
+Copies the current line downward, and comments the original line.
 
-Initial release of ...
+Example input:
 
-### 1.0.1
+```javascript
+const foo = 'bar';|
+```
 
-Fixed issue #.
+Example output:
 
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-- Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-- Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-- Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-- [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-- [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+```javascript
+// const foo = 'bar';
+const foo = 'bar';|
+```
