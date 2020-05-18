@@ -47,6 +47,11 @@ export const collapseWhitespaces = () => {
  * Duplicates the current line, and comments the original.
  */
 export const duplicateLineAndComment = () => {
+  const editor = window.activeTextEditor;
+  if (!editor) {
+    return;
+  }
+
   commands.executeCommand('editor.action.addCommentLine');
   commands.executeCommand('editor.action.copyLinesDownAction');
   commands.executeCommand('editor.action.removeCommentLine');

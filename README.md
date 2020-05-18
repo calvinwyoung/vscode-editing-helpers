@@ -18,14 +18,14 @@ Collapses contiguous whitespace characters around the cursor such that only one 
 
 Example input:
 
-```
-foo    |      bar
+```javascript
+const foo =   |   'bar';
 ```
 
 Example output:
 
-```
-foo |bar
+```javascript
+const foo = |'bar';
 ```
 
 ### Collapse Whitespaces
@@ -35,14 +35,14 @@ characters remain.
 
 Example input:
 
-```
-foo    |      bar
+```javascript
+const foo = 'bar'  |  ;
 ```
 
 Example output:
 
-```
-foo|bar
+```javascript
+const foo = 'bar'|;
 ```
 
 ### Duplicate Line and Comment
@@ -61,3 +61,13 @@ Example output:
 // const foo = 'bar';
 const foo = 'bar';|
 ```
+
+## Local installation
+
+To install this extension locally:
+
+1. Clone this repository and install dependencies via `npm install`
+2. Run `make package`. This will create a `.vsix` package in the root directory.
+3. Open VS Code and visit the Extensions pane (`View` -> `Extensions`).
+4. Click on the `...` icon at the top-right corner of the Extensions sidebar and select
+   "Install from VSIX..." in the dropdown menu. Select the `.vsix` file and you're done!
