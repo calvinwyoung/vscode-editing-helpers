@@ -66,7 +66,7 @@ const foo = 'bar';|
 
 To install this extension locally:
 
-1. Clone this repository and install dependencies via `npm install`
+1. Clone this repository and install dependencies via `yarn install`
 2. Run `make package`. This will create a `.vsix` package in the root directory.
 3. Open VS Code and visit the Extensions pane (`View` -> `Extensions`).
 4. Click on the `...` icon at the top-right corner of the Extensions sidebar and select
