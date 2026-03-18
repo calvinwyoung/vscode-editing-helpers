@@ -1,2 +1,7 @@
+.PHONY: package
 package:
-	npm run package
+	pnpm run package
+
+.PHONY: test
+test:
+	pnpm run test

@@ -1,5 +1,6 @@
-// See https://go.microsoft.com/fwlink/?LinkId=733558
-// for the documentation about the tasks.json format
+// Runs `tsc --watch` in the background so the extension recompiles on save.
+// This is the default build task, referenced by launch.json's preLaunchTask.
+// See: https://go.microsoft.com/fwlink/?LinkId=733558
 {
   "version": "2.0.0",
   "tasks": [

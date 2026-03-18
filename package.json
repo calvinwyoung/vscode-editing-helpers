@@ -2,21 +2,16 @@
   "name": "vscode-editing-helpers",
   "displayName": "Editing Helpers",
   "description": "A collection helper functions to improve editing with VSCode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "calvinwyoung",
   "repository": "https://github.com/calvinwyoung/vscode-editing-helpers",
   "engines": {
-    "vscode": "^1.45.0"
+    "vscode": "^1.74.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:vscode-editing-helpers.justOneSpace",
-    "onCommand:vscode-editing-helpers.collapseWhitespaces",
-    "onCommand:vscode-editing-helpers.duplicateLineAndComment"
-  ],
-  "main": "./out/extension.js",
+  "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
@@ -34,28 +29,21 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "pnpm run compile",
     "compile": "tsc -p ./",
-    "lint": "eslint src --ext ts",
+    "check": "biome check",
+    "fix": "biome check --write --unsafe",
     "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
-    "test": "node ./out/test/runTest.js",
+    "pretest": "pnpm run compile && pnpm run check",
+    "test": "vitest run",
     "package": "vsce package"
   },
   "devDependencies": {
-    "@types/vscode": "^1.45.0",
-    "@types/glob": "^7.1.1",
-    "@types/mocha": "^7.0.2",
-    "@types/node": "^13.11.0",
-    "eslint": "^6.8.0",
-    "@typescript-eslint/parser": "^2.30.0",
-    "@typescript-eslint/eslint-plugin": "^2.30.0",
-    "glob": "^7.1.6",
-    "mocha": "^7.1.2",
-    "typescript": "^3.8.3",
-    "vscode-test": "^1.3.0"
-  },
-  "dependencies": {
-    "vsce": "^1.75.0"
+    "@biomejs/biome": "^2.4.7",
+    "@types/node": "^25.5.0",
+    "@types/vscode": "^1.110.0",
+    "@vscode/vsce": "^3.7.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
   }
 }

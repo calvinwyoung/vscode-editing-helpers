@@ -1,4 +1,5 @@
-import { Position, Range, Selection, TextDocument } from 'vscode';
+import type { Selection, TextDocument } from 'vscode';
+import { Position, Range } from 'vscode';
 
 /**
  * Returns the the range representing all contiguous whitespace characters around the
@@ -10,7 +11,8 @@ export const findHorizontalWhitespaceRange = (
 ): Range => {
   const activePosition = selection.active;
   const text = textDocument.lineAt(activePosition).text;
-  let start, end;
+  let start: number;
+  let end: number;
 
   // `startIx` should end up being the index of the first whitespace character in the
   // line. This corresponds to the point right before the first whitespace character.
