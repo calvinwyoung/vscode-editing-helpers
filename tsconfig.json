@@ -16,5 +16,5 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   },
-  "exclude": ["node_modules", ".vscode-test", "vitest.config.ts"]
+  "exclude": ["node_modules", "src/**/*.test.ts"]
 }

@@ -1,6 +1,6 @@
-// Launch configurations for developing and testing the extension.
+// Launch configuration for developing the extension.
 // "Run Extension" opens a new VSCode window with the extension loaded.
-// "Extension Tests" runs integration tests inside a VSCode instance.
+// Tests run via `pnpm test` (vitest) — no launch config needed.
 // See: https://go.microsoft.com/fwlink/?linkid=830387
 {
   "version": "0.2.0",
@@ -12,18 +12,6 @@
       "runtimeExecutable": "${execPath}",
       "args": ["--extensionDevelopmentPath=${workspaceFolder}"],
       "outFiles": ["${workspaceFolder}/dist/**/*.js"],
-      "preLaunchTask": "${defaultBuildTask}"
-    },
-    {
-      "name": "Extension Tests",
-      "type": "extensionHost",
-      "request": "launch",
-      "runtimeExecutable": "${execPath}",
-      "args": [
-        "--extensionDevelopmentPath=${workspaceFolder}",
-        "--extensionTestsPath=${workspaceFolder}/dist/test/suite/index"
-      ],
-      "outFiles": ["${workspaceFolder}/dist/test/**/*.js"],
       "preLaunchTask": "${defaultBuildTask}"
     }
   ]

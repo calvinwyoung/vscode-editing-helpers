@@ -2,19 +2,14 @@
   "name": "vscode-editing-helpers",
   "displayName": "Editing Helpers",
   "description": "A collection helper functions to improve editing with VSCode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "calvinwyoung",
   "repository": "https://github.com/calvinwyoung/vscode-editing-helpers",
   "engines": {
-    "vscode": "^1.45.0"
+    "vscode": "^1.74.0"
   },
   "categories": [
     "Other"
-  ],
-  "activationEvents": [
-    "onCommand:vscode-editing-helpers.justOneSpace",
-    "onCommand:vscode-editing-helpers.collapseWhitespaces",
-    "onCommand:vscode-editing-helpers.duplicateLineAndComment"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -47,7 +42,6 @@
     "@biomejs/biome": "^2.4.6",
     "@types/node": "^24.0.0",
     "@types/vscode": "^1.45.0",
-    "@vscode/test-electron": "^2.5.2",
     "@vscode/vsce": "^3.4.2",
     "typescript": "^5.8.3",
     "vitest": "^3.2.1"
