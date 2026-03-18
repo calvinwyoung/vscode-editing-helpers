@@ -39,11 +39,11 @@
     "package": "vsce package"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.6",
-    "@types/node": "^24.0.0",
-    "@types/vscode": "^1.45.0",
-    "@vscode/vsce": "^3.4.2",
-    "typescript": "^5.8.3",
-    "vitest": "^3.2.1"
+    "@biomejs/biome": "^2.4.7",
+    "@types/node": "^25.5.0",
+    "@types/vscode": "^1.110.0",
+    "@vscode/vsce": "^3.7.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
   }
 }
