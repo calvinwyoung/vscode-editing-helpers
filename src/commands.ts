@@ -1,4 +1,5 @@
 import { commands, window } from 'vscode';
+
 import { findHorizontalWhitespaceRange } from './helpers';
 
 /**

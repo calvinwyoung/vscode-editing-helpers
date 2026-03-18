@@ -1,4 +1,5 @@
-import { commands, ExtensionContext } from 'vscode';
+import { commands, type ExtensionContext } from 'vscode';
+
 import { collapseWhitespaces, duplicateLineAndComment, justOneSpace } from './commands';
 
 export function activate(context: ExtensionContext) {

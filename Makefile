@@ -1,2 +1,2 @@
 package:
-	npm run package
+	pnpm run package
